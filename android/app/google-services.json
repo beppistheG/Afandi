@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "740305752988",
+    "project_id": "afandi-youssefg",
+    "storage_bucket": "afandi-youssefg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740305752988:android:8c254918b4e0130099ee59",
+        "android_client_info": {
+          "package_name": "com.example.netninja_training_session"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740305752988-tauopnq27conujkv4j9tfjpmd8u90p6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgwfIEJTGpdD8YWuJRoQfVPTsvOZr1fP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740305752988-tauopnq27conujkv4j9tfjpmd8u90p6k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
