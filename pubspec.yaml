@@ -37,7 +37,10 @@ dependencies:
   #Firsebase auth and firebase core
   firebase_auth:
   firebase_core:
+<<<<<<< HEAD
   cloud_firestore:
+=======
+>>>>>>> origin/main
 
 dev_dependencies:
   flutter_test:
