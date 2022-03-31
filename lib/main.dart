@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:netninja_training_session/Profile%20screen.dart';
 
+<<<<<<< HEAD
 import 'Sign up.dart';
 
 
@@ -12,6 +13,13 @@ void main() {
 }
 
 
+=======
+
+void main() {
+  runApp(const MyApp());
+}
+
+>>>>>>> origin/main
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
@@ -93,7 +101,11 @@ return user;
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
 // create the TextEditingController controller
+=======
+// create the textfiled controller
+>>>>>>> origin/main
   TextEditingController _emailController= TextEditingController();
   TextEditingController _passwordController= TextEditingController();
 
@@ -114,6 +126,7 @@ return user;
           ),
           const SizedBox(height: 44,
           ),
+<<<<<<< HEAD
        Padding(
          padding: const EdgeInsets.all(8.0),
          child: TextField(
@@ -147,18 +160,52 @@ return user;
           ),
           SizedBox(
             width: double.infinity,
+=======
+       TextField(
+        controller: _emailController,
+            keyboardType: TextInputType.emailAddress,
+            decoration:  const InputDecoration(
+              hintText: "Enter Email",
+              prefixIcon: Icon(Icons.mail , color: Colors.black),
+
+            ),
+          ),
+      const SizedBox( height: 26.0,
+          ),
+       TextField(
+        controller: _passwordController,
+            obscureText: true,
+            decoration: const InputDecoration(
+                hintText: "Enter Password",
+                prefixIcon: Icon(Icons.lock , color: Colors.black),
+          ),
+          ),
+      const SizedBox( height: 20.0,
+          ),
+      const Text( "Forgot password ?" , textAlign: TextAlign.center, style: TextStyle(color: Colors.red)
+          ),
+      const SizedBox( height: 18.0,
+          ),
+          Container(
+            width: 20.0,
+>>>>>>> origin/main
             child: RawMaterialButton(fillColor: const Color(0xFF0069FE) ,onPressed: () async {
               //test the app
               User? user = await loginUsingEmailPassword(email: _emailController.text, password: _passwordController.text, context: context);
               print(user);
               if(user != null){
+<<<<<<< HEAD
                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const ProfileScreen()));
+=======
+                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfileScreen()));
+>>>>>>> origin/main
               }
             },
                child: const Text("Login", style: TextStyle(color: Colors.white, fontSize: 20.0), ),
             shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0)),),
 
           ),
+<<<<<<< HEAD
           SizedBox(
             width: double.infinity,
             child: RawMaterialButton(
@@ -174,8 +221,14 @@ return user;
               child: const Text("Sign up", style: TextStyle(color: Colors.black, fontSize: 20.0)),
             ),
           )
+=======
+>>>>>>> origin/main
         ],
       ),
     );
   }
 }
+<<<<<<< HEAD
+=======
+///5 :22
+>>>>>>> origin/main
