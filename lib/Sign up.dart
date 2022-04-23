@@ -5,7 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:netninja_training_session/widget 1/RoundedInputField.dart';
 
-import 'Profile screen.dart';
+import 'HomeScreen/Profile screen.dart';
 
 class Signup extends StatefulWidget {
   const Signup({Key? key}) : super(key: key);
@@ -79,7 +79,7 @@ class _SignupState extends State<Signup> {
                     await auth.currentUser?.reload();
                     Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
-                            builder: (context) => ProfileScreen()));
+                            builder: (context) => Profilescreen()));
                   }
                   catch (e) {
                     print("The exception thrown is $e");

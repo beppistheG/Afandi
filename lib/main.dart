@@ -1,9 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:netninja_training_session/Profile%20screen.dart';
+import 'package:netninja_training_session/HomeScreen/Profile screen.dart';
 
-<<<<<<< HEAD
 import 'Sign up.dart';
 
 
@@ -13,13 +12,6 @@ void main() {
 }
 
 
-=======
-
-void main() {
-  runApp(const MyApp());
-}
-
->>>>>>> origin/main
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
@@ -83,37 +75,33 @@ class _LoginScreenState extends State<LoginScreen> {
 
 //Login system
 
-static Future<User?> loginUsingEmailPassword({required String email, required String password, required BuildContext context}) async{
-FirebaseAuth auth = FirebaseAuth.instance;
-User? user ;
-try{
-  UserCredential userCredential = await auth.signInWithEmailAndPassword(email: email, password: password);
-  user = userCredential.user;
-}
-on FirebaseAuthException catch(e){
-  if(e.code == "user-not-found"){
-    print("This user does not Exist");
+  static Future<User?> loginUsingEmailPassword({required String email, required String password, required BuildContext context}) async{
+    FirebaseAuth auth = FirebaseAuth.instance;
+    User? user ;
+    try{
+      UserCredential userCredential = await auth.signInWithEmailAndPassword(email: email, password: password);
+      user = userCredential.user;
+    }
+    on FirebaseAuthException catch(e){
+      if(e.code == "user-not-found"){
+        print("This user does not Exist");
+      }
+    }
+    return user;
   }
-}
-return user;
-}
 
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
 // create the TextEditingController controller
-=======
-// create the textfiled controller
->>>>>>> origin/main
-  TextEditingController _emailController= TextEditingController();
-  TextEditingController _passwordController= TextEditingController();
+    TextEditingController _emailController= TextEditingController();
+    TextEditingController _passwordController= TextEditingController();
 
 
 
-  //Amro and Hekmat Designing
+    //Amro and Hekmat Designing
 
-  return Padding(
+    return Padding(
       padding: const EdgeInsets.all(
           16.0), //Used const to make the value the same for everyone
       child: Column(
@@ -122,15 +110,14 @@ return user;
         children:  [
 
           const Text(" Login to your account",
-          style:TextStyle(color: Colors.black12, fontSize: 44.0,fontWeight: FontWeight.bold )
+              style:TextStyle(color: Colors.black12, fontSize: 44.0,fontWeight: FontWeight.bold )
           ),
           const SizedBox(height: 44,
           ),
-<<<<<<< HEAD
-       Padding(
-         padding: const EdgeInsets.all(8.0),
-         child: TextField(
-          controller: _emailController,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller: _emailController,
               keyboardType: TextInputType.emailAddress,
               decoration:  const InputDecoration(
                 hintText: "Enter Email",
@@ -138,74 +125,40 @@ return user;
 
               ),
             ),
-       ),
-      const SizedBox( height: 26.0,
           ),
-       Padding(
-         padding: const EdgeInsets.all(8.0),
-         child: TextField(
-          controller: _passwordController,
+          const SizedBox( height: 26.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller: _passwordController,
               obscureText: true,
               decoration: const InputDecoration(
-                  hintText: "Enter Password",
-                  prefixIcon: Icon(Icons.lock , color: Colors.black),
+                hintText: "Enter Password",
+                prefixIcon: Icon(Icons.lock , color: Colors.black),
+              ),
             ),
-            ),
-       ),
-      const SizedBox( height: 16.0,
           ),
-      const Text( "Forgot password ?" , textAlign: TextAlign.center, style: TextStyle(color: Colors.red)
+          const SizedBox( height: 16.0,
           ),
-      const SizedBox( height: 88.0,
+          const Text( "Forgot password ?" , textAlign: TextAlign.center, style: TextStyle(color: Colors.red)
+          ),
+          const SizedBox( height: 88.0,
           ),
           SizedBox(
             width: double.infinity,
-=======
-       TextField(
-        controller: _emailController,
-            keyboardType: TextInputType.emailAddress,
-            decoration:  const InputDecoration(
-              hintText: "Enter Email",
-              prefixIcon: Icon(Icons.mail , color: Colors.black),
-
-            ),
-          ),
-      const SizedBox( height: 26.0,
-          ),
-       TextField(
-        controller: _passwordController,
-            obscureText: true,
-            decoration: const InputDecoration(
-                hintText: "Enter Password",
-                prefixIcon: Icon(Icons.lock , color: Colors.black),
-          ),
-          ),
-      const SizedBox( height: 20.0,
-          ),
-      const Text( "Forgot password ?" , textAlign: TextAlign.center, style: TextStyle(color: Colors.red)
-          ),
-      const SizedBox( height: 18.0,
-          ),
-          Container(
-            width: 20.0,
->>>>>>> origin/main
             child: RawMaterialButton(fillColor: const Color(0xFF0069FE) ,onPressed: () async {
               //test the app
               User? user = await loginUsingEmailPassword(email: _emailController.text, password: _passwordController.text, context: context);
               print(user);
               if(user != null){
-<<<<<<< HEAD
-                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const ProfileScreen()));
-=======
-                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfileScreen()));
->>>>>>> origin/main
+                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const Profilescreen()));
               }
             },
-               child: const Text("Login", style: TextStyle(color: Colors.white, fontSize: 20.0), ),
-            shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0)),),
+              child: const Text("Login", style: TextStyle(color: Colors.white, fontSize: 20.0), ),
+              shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0)),),
 
           ),
-<<<<<<< HEAD
           SizedBox(
             width: double.infinity,
             child: RawMaterialButton(
@@ -215,20 +168,14 @@ return user;
               shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0)),
               onPressed: () {
                 Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                builder: (context) => Signup()));
+                    MaterialPageRoute(
+                        builder: (context) => Signup()));
               },
               child: const Text("Sign up", style: TextStyle(color: Colors.black, fontSize: 20.0)),
             ),
           )
-=======
->>>>>>> origin/main
         ],
       ),
     );
   }
 }
-<<<<<<< HEAD
-=======
-///5 :22
->>>>>>> origin/main
