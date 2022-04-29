@@ -7,6 +7,7 @@ import 'package:netninja_training_session/HomeScreen/components/IconBtnWithCount
 import 'Categories.dart';
 import 'DiscountBanner.dart';
 import 'HomeHeader.dart';
+import 'Popular Products.dart';
 import 'SearchField.dart';
 import 'Special Offer.dart';
 
@@ -29,6 +30,8 @@ class Body extends StatelessWidget {
             SizedBox(height: getProportionateScreenHeight(20)),
             Categories(),
             SpecialOffers(),
+            PopularProducts(),
+            SizedBox(height: getProportionateScreenWidth(30)),
           ],
         ),
       ),
