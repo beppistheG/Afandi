@@ -56,7 +56,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Nike Sport White - Man Pant",
+    title: "All sorts of legumes",
     price: 50.5,
     description: description,
     rating: 4.1,
@@ -65,7 +65,7 @@ List<Product> demoProducts = [
   Product(
     id: 3,
     images: [
-      "assets/images/glap.png",
+      "assets/images/orange-king-of-fruits.png",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -73,7 +73,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Gloves XC Omega - Polygon",
+    title: "Fresh Oranges - From Mount Leb",
     price: 36.55,
     description: description,
     rating: 4.1,
@@ -83,7 +83,7 @@ List<Product> demoProducts = [
   Product(
     id: 4,
     images: [
-      "assets/images/wireless headset.png",
+      "assets/images/cheese.png",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -91,7 +91,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Logitech Head",
+    title: "Special Cheese",
     price: 20.20,
     description: description,
     rating: 4.1,
