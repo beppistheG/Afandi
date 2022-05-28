@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netninja_training_session/HomeScreen/Profile%20screen.dart';
 
-import '../size_config.dart';
+import 'package:netninja_training_session/size_config.dart';
 import 'components/custom_surfix_icon.dart';
 import 'components/default_button.dart';
 import 'components/form_error.dart';

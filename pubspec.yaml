@@ -40,6 +40,7 @@ dependencies:
   cloud_firestore:
   flutter_svg:
   provider:
+  get: ^4.6.5
 
 
 dev_dependencies:

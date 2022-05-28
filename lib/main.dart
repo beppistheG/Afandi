@@ -1,9 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:netninja_training_session/HomeScreen/Profile screen.dart';
+import 'package:netninja_training_session/sign_up/sign_up_screen.dart';
 
 import 'Sign up.dart';
+import 'size_config.dart';
 
 
 void main() {
@@ -16,6 +20,8 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Get.lazyPut(() => SizeConfig());
+
     return MaterialApp(
       home: HomePage(),
     );
@@ -99,7 +105,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
 
 
-    //Amro and Hekmat Designing
 
     return Padding(
       padding: const EdgeInsets.all(
@@ -168,8 +173,7 @@ class _LoginScreenState extends State<LoginScreen> {
               shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0)),
               onPressed: () {
                 Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                        builder: (context) => Signup()));
+                    MaterialPageRoute( builder: (context) => SignUpScreen()));
               },
               child: const Text("Sign up", style: TextStyle(color: Colors.black, fontSize: 20.0)),
             ),
