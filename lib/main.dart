@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:netninja_training_session/HomeScreen/Profile screen.dart';
+import 'package:netninja_training_session/registration.dart';
 import 'package:netninja_training_session/sign_up/sign_up_screen.dart';
 
 import 'Sign up.dart';
@@ -173,7 +174,7 @@ class _LoginScreenState extends State<LoginScreen> {
               shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0)),
               onPressed: () {
                 Navigator.of(context).pushReplacement(
-                    MaterialPageRoute( builder: (context) => SignUpScreen()));
+                    MaterialPageRoute( builder: (context) => RegistrationScreen()));
               },
               child: const Text("Sign up", style: TextStyle(color: Colors.black, fontSize: 20.0)),
             ),

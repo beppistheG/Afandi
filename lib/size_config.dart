@@ -1,16 +1,16 @@
-
-
 import 'package:flutter/material.dart';
 
 
 
 
 class SizeConfig {
+  static get context => null;
+
   void initState(BuildContext context)  {
     _mediaQueryData = MediaQuery.of(context);
 
   }
-  static  late MediaQueryData _mediaQueryData = MediaQuery.of(context);
+  static  late MediaQueryData _mediaQueryData = MediaQuery.of(context!);
   static  double screenWidth = _mediaQueryData.size.width;
   static  double screenHeight = _mediaQueryData.size.height;
   static  late double defaultSize;
