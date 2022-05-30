@@ -28,9 +28,7 @@ List<Product> demoProducts = [
     id: 1,
     images: [
       "assets/images/fruitbasket.png",
-      "assets/images/cheese.png",
-      "assets/images/cheese_white.png",
-      "assets/images/orange-king-of-fruits.png",
+
     ],
     colors: [
       Color(0xFFF6625E),
@@ -48,7 +46,7 @@ List<Product> demoProducts = [
   Product(
     id: 2,
     images: [
-      "assets/images/fruitbasket.png",
+      "assets/images/cheese_white.png",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -100,4 +98,4 @@ List<Product> demoProducts = [
 ];
 
 const String description =
-    "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";
+"nice";

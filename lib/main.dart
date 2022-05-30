@@ -5,16 +5,20 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:netninja_training_session/HomeScreen/Profile screen.dart';
 import 'package:netninja_training_session/registration.dart';
-
-
-import 'Sign up.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'size_config.dart';
 
 
 void main() {
+  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  // FlutterNativeSplash.remove();
+
+
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
+
+
 
 
 class MyApp extends StatelessWidget {
@@ -55,6 +59,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: FutureBuilder(
         future: _initializeFirebase(),
         builder: (context , snapshot){
@@ -110,16 +115,21 @@ class _LoginScreenState extends State<LoginScreen> {
     return Padding(
       padding: const EdgeInsets.all(
           16.0), //Used const to make the value the same for everyone
-      child: Column(
+      child: SingleChildScrollView(
+        child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children:  [
 
-          const Text(" Login to your account",
-              style:TextStyle(color: Colors.black12, fontSize: 44.0,fontWeight: FontWeight.bold )
-          ),
-          const SizedBox(height: 44,
-          ),
+
+
+           SizedBox(height: 180,
+
+                 child: Image.asset(
+                "assets/images/logo.PNG",
+                 fit: BoxFit.contain,
+                 )
+           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
@@ -149,7 +159,9 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           const Text( "Forgot password ?" , textAlign: TextAlign.center, style: TextStyle(color: Colors.red)
           ),
-          const SizedBox( height: 88.0,
+          SingleChildScrollView(
+            child: const SizedBox( height: 88.0,
+            ),
           ),
           SizedBox(
             width: double.infinity,
@@ -173,14 +185,14 @@ class _LoginScreenState extends State<LoginScreen> {
               padding: const EdgeInsets.symmetric(vertical: 20.0,),
               shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0)),
               onPressed: () {
-                Navigator.of(context).pushReplacement(
+                Navigator.of(context).push(
                     MaterialPageRoute( builder: (context) => RegistrationScreen()));
               },
               child: const Text("Sign up", style: TextStyle(color: Colors.black, fontSize: 20.0)),
             ),
           )
         ],
-      ),
+      )),
     );
   }
 }
