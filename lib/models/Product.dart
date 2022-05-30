@@ -28,9 +28,9 @@ List<Product> demoProducts = [
     id: 1,
     images: [
       "assets/images/fruitbasket.png",
-      "assets/images/ps4_console_white_2.png",
-      "assets/images/ps4_console_white_3.png",
-      "assets/images/ps4_console_white_4.png",
+      "assets/images/cheese.png",
+      "assets/images/cheese_white.png",
+      "assets/images/orange-king-of-fruits.png",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -38,7 +38,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Wireless Controller for PS4™",
+    title: "Fresh Fruits",
     price: 64.99,
     description: description,
     rating: 4.8,

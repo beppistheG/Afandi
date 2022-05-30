@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:netninja_training_session/HomeScreen/Profile screen.dart';
 import 'package:netninja_training_session/registration.dart';
-import 'package:netninja_training_session/sign_up/sign_up_screen.dart';
+
 
 import 'Sign up.dart';
 import 'size_config.dart';
